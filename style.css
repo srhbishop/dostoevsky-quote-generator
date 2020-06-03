@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mukta', sans-serif;
+}
+
+h1 {
+    margin: 5px;
+}
+
+h1, h2 { 
+    padding: 5px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.generate-quote {
+    color: black;
+    font-style: italic;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: black;
+    box-shadow: none;
+    font-family: 'Mukta', sans-serif;
+    background-color: white;
+    width: 160px;
+    transition: .5s;
+    border: 1px solid black;
+}
+
+.generate-quote img {
+    width: 100%;
+}
+
+.generate-quote:hover {
+    width: 170px;
+}
+
+.quote-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    margin: 5px;
+    width: 800px;
+}
+
+.fa-quote-left {
+    text-align: left;
+    width: 800px;
+    opacity: 0;
+}
+
+.fa-quote-right {
+    width: 800px;
+    text-align: right;
+    opacity: 0;
+}
+
+.activated {
+    opacity: 1;
+}
+
+i {
+    font-size: 2rem;
+    color: black;
+}
+
+.quote-container {
+    opacity: 0;
+}
+
+.quote-container-active {
+    opacity: 1;
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+    padding: 10px;
+    width: 700px;
+}
+
+@media only screen and (max-width: 800px) {
+    .quote-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: 'Caveat', cursive;
+        margin: 5px;
+        width: 70vw;
+    }
+    
+    .fa-quote-left {
+        text-align: left;
+        width: 70vw;
+    }
+    
+    .fa-quote-right {
+        width: 70vw;
+        text-align: right;
+    }
+    
+    .quote-container {
+        opacity: 0;
+    }
+    
+    .quote-container-active {
+        opacity: 1;
+        text-align: center;
+        font-size: 1.75rem;
+        padding: 5px;
+        padding: 10px;
+        width: 65vw;
+    }
+
+}
