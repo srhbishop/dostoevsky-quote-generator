@@ -2,6 +2,8 @@ const quoteContainer = document.querySelector('.quote-container');
 const getQuote = document.querySelector('.generate-quote');
 const quoteLeft = document.querySelector('.fa-quote-left');
 const quoteRight = document.querySelector('.fa-quote-right');
+const twitterLink = document.querySelector('.twitter-share-button');
+const twitterBtn = document.querySelector('.twitter-btn')
 
 const quotesArray = [
     "To go wrong in one\'s own way is better than to go right in someone else\'s",
@@ -30,8 +32,10 @@ const quotesArray = [
 ]
 
 getQuote.addEventListener('click', function() {
-    quoteContainer.innerText = quotesArray[Math.floor(Math.random() * quotesArray.length)];
-    quoteContainer.classList.add('quote-container-active');
+    newQuote = quotesArray[Math.floor(Math.random() * quotesArray.length)];
+    quoteContainer.innerText = newQuote;
+    twitterLink.setAttribute("href", "https://twitter.com/intent/tweet?text=" + newQuote);
     quoteLeft.classList.add('activated');
     quoteRight.classList.add('activated');
+    twitterBtn.classList.add('activated');
 });

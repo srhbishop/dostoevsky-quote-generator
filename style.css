@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,20 +11,28 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Mukta', sans-serif;
+    align-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(54, 61, 77);
+    min-height: 100vh;
 }
 
-h1 {
-    margin: 5px;
+.card {
+    width: 600px;
+    margin: 50px;
+    background-image: linear-gradient(rgba(243, 239, 239, 0.986), rgb(133, 133, 133));
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 20px 50px 10px rgb(11, 12, 17);
+
 }
 
-h1, h2 { 
-    padding: 5px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 1.2rem;
+.portrait-btn {
+    position: relative;
+    top: -50px;
 }
 
 .generate-quote {
@@ -30,17 +40,34 @@ h2 {
     font-style: italic;
     cursor: pointer;
     font-size: 1.2rem;
-    border: black;
+    border: 1px solid black;
+    border-radius: 50%;
     box-shadow: none;
-    font-family: 'Mukta', sans-serif;
     background-color: white;
     width: 160px;
     transition: .5s;
     border: 1px solid black;
+    margin: 10px;
+}
+
+.quote-me {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.534);
+    z-index: 20;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .generate-quote img {
     width: 100%;
+    border-radius: 50%;
 }
 
 .generate-quote:hover {
@@ -53,78 +80,99 @@ h2 {
     align-items: center;
     padding: 15px;
     border-radius: 5px;
-    font-family: 'Caveat', cursive;
     margin: 5px;
-    width: 800px;
 }
 
 .fa-quote-left {
     text-align: left;
-    width: 800px;
     opacity: 0;
+    width: 100%;
 }
 
 .fa-quote-right {
-    width: 800px;
     text-align: right;
     opacity: 0;
+    width: 100%;
+}
+
+i {
+    font-size: 2rem;
+    color: rgb(79, 108, 112);
+}
+
+.quote-container {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5px;
+    padding: 10px;
+    color: black;
+}
+
+.bottom-bar {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.twitter-btn {
+    background-color: #3595E0;
+    box-shadow: 1px 1px 3px 1px #2971a8;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+    opacity: 0;
+}
+
+.twitter-btn:hover {
+    background-color: #2a70a7;
+}
+
+.fa-twitter {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.twitter-share-button {
+    color: white;
+    text-decoration: none;
 }
 
 .activated {
     opacity: 1;
 }
 
-i {
-    font-size: 2rem;
-    color: black;
-}
-
-.quote-container {
-    opacity: 0;
-}
-
-.quote-container-active {
-    opacity: 1;
-    text-align: center;
-    font-size: 2rem;
-    padding: 5px;
-    padding: 10px;
-    width: 700px;
-}
-
 @media only screen and (max-width: 800px) {
+    .card {
+        width: 90vw;
+        height: auto;
+    }
     .quote-div {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 15px;
-        border-radius: 5px;
-        font-family: 'Caveat', cursive;
-        margin: 5px;
-        width: 70vw;
+        width: 80vw;
     }
     
     .fa-quote-left {
         text-align: left;
-        width: 70vw;
+        width: 80vw;
     }
     
     .fa-quote-right {
-        width: 70vw;
+        width: 80vw;
         text-align: right;
     }
     
     .quote-container {
-        opacity: 0;
-    }
-    
-    .quote-container-active {
-        opacity: 1;
         text-align: center;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         padding: 5px;
         padding: 10px;
-        width: 65vw;
+        width: 80vw;
     }
 
 }
